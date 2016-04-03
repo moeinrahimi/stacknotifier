@@ -1,5 +1,7 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "guzzlehttp/oauth-subscriber": "^0.3.0",
+        "bshaffer/oauth2-server-php": "~1.8"
     }
 }

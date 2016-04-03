@@ -226,5 +226,109 @@
             "rest",
             "web service"
         ]
+    },
+    {
+        "name": "guzzlehttp/oauth-subscriber",
+        "version": "0.3.0",
+        "version_normalized": "0.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/oauth-subscriber.git",
+            "reference": "04960cdef3cd80ea401d6b0ca8b3e110e9bf12cf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/04960cdef3cd80ea401d6b0ca8b3e110e9bf12cf",
+            "reference": "04960cdef3cd80ea401d6b0ca8b3e110e9bf12cf",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "~6.0",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2015-08-15 19:44:28",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Subscriber\\Oauth\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle OAuth 1.0 subscriber",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "Guzzle",
+            "oauth"
+        ]
+    },
+    {
+        "name": "bshaffer/oauth2-server-php",
+        "version": "v1.8.0",
+        "version_normalized": "1.8.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bshaffer/oauth2-server-php.git",
+            "reference": "058c98f73209f9c49495e1799d32c035196fe8b8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bshaffer/oauth2-server-php/zipball/058c98f73209f9c49495e1799d32c035196fe8b8",
+            "reference": "058c98f73209f9c49495e1799d32c035196fe8b8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "suggest": {
+            "aws/aws-sdk-php": "~2.8 is required to use the DynamoDB storage engine",
+            "firebase/php-jwt": "~2.2 is required to use JWT features",
+            "predis/predis": "Required to use the Redis storage engine",
+            "thobbs/phpcassa": "Required to use the Cassandra storage engine"
+        },
+        "time": "2015-09-18 18:05:10",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "OAuth2": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Brent Shaffer",
+                "email": "bshafs@gmail.com",
+                "homepage": "http://brentertainment.com"
+            }
+        ],
+        "description": "OAuth2 Server for PHP",
+        "homepage": "http://github.com/bshaffer/oauth2-server-php",
+        "keywords": [
+            "auth",
+            "oauth",
+            "oauth2"
+        ]
     }
 ]
