@@ -16,9 +16,19 @@ use GuzzleHttp\Client;
 if (isset($_GET['code'])) {
 $client = new GuzzleHttp\Client('https://stackexchange.com/oauth/');
 $code =$_GET['code'];
-$response = $client->request('POST',"access_token?client_id=6738&client_secret=hLhSGXL0yWCCtuAc7FORbQ((&code=$code&redirect_uri=https://stacknotifier.herokuapp.com/");
-
-print_r($response->getBody());
+// $response = $client->request('POST',"access_token?
+// 	client_id=6738&client_secret=hLhSGXL0yWCCtuAc7FORbQ((
+// 		&code=$code&redirect_uri=https://stacknotifier.herokuapp.com/");
+$response = $client->request('POST', 'access_token', [
+    'form_params' => [
+        'client_id' => '6738',
+        'client_secret' => 'hLhSGXL0yWCCtuAc7FORbQ((',
+        'code' =>'$code',
+            'redirect_uri' => 'https://stacknotifier.herokuapp.com/'
+        
+    ]
+]);
+print_r($response);
 }
 
 ?>
