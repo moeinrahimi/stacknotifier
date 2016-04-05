@@ -28,7 +28,7 @@ $response = $client->request('POST', 'access_token', [
     'form_params' => [
         'client_id' => '6738',
         'client_secret' => 'hLhSGXL0yWCCtuAc7FORbQ((',
-        'code' =>'$code',
+        'code' =>$code,
             'redirect_uri' => 'https://stacknotifier.herokuapp.com/'
         
     ]
