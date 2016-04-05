@@ -42,11 +42,11 @@ $client = new Client([
     // Base URI is used with relative requests
     'base_uri' => 'https://api.stackexchange.com/',
     // You can set any number of default request options.
-    'timeout'  => 2.0,
+    'timeout'  => 8.0,
 ]);
 echo $access_token;
 $response = $client->request('GET',"2.2/me/notifications?site=stackoverflow&access_token=$access_token&key=TxfA4E5YFX*jZ5wHEd2iKg((");
-print_r($response);
+print_r($response->getBody()->getContents());
 
 }
 
