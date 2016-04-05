@@ -33,8 +33,8 @@ $data = $client->request('POST', 'access_token', [
         
     ]
 ]);
-$response = $client->post($data);
-print_r($response);
+
+print_r($response->getBody()->getContents());
 }
 
 ?>
