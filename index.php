@@ -14,7 +14,12 @@ use GuzzleHttp\Client;
 <?php
 
 if (isset($_GET['code'])) {
-$client = new GuzzleHttp\Client('https://stackexchange.com/oauth/');
+$client = new GuzzleHttp\Client ([
+    // Base URI is used with relative requests
+    'base_uri' => 'https://stackexchange.com/oauth/',
+    // You can set any number of default request options.
+    'timeout'  => 8.0,
+]);
 $code =$_GET['code'];
 // $response = $client->request('POST',"access_token?
 // 	client_id=6738&client_secret=hLhSGXL0yWCCtuAc7FORbQ((
