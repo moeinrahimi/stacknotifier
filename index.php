@@ -37,9 +37,7 @@ $response = $client->request('POST', 'access_token', [
 $auth =$response->getBody()->getContents();
 
 $auth = parse_str($auth);
-echo $auth;
 echo $access_token;
-echo $auth['0'];
 }
 
 ?>
