@@ -46,7 +46,8 @@ $client = new Client([
 ]);
 echo $access_token;
 $response = $client->request('GET',"2.2/me/notifications?site=stackoverflow&access_token=$access_token&key=TxfA4E5YFX*jZ5wHEd2iKg((");
-print_r($response->getBody()->getContents());
+$y = (string) $response->getBody()
+print_r($y);
 
 }
 
