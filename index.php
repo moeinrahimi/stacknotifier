@@ -24,7 +24,7 @@ $code =$_GET['code'];
 // $response = $client->request('POST',"access_token?
 // 	client_id=6738&client_secret=hLhSGXL0yWCCtuAc7FORbQ((
 // 		&code=$code&redirect_uri=https://stacknotifier.herokuapp.com/");
-$response = $client->request('POST', 'access_token', [
+$data = $client->request('POST', 'access_token', [
     'form_params' => [
         'client_id' => '6738',
         'client_secret' => 'hLhSGXL0yWCCtuAc7FORbQ((',
@@ -33,6 +33,7 @@ $response = $client->request('POST', 'access_token', [
         
     ]
 ]);
+$response = $client->post($data);
 print_r($response);
 }
 
