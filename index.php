@@ -50,7 +50,7 @@ $y = (string) $response->getBody();
 $note = json_decode($y,true);
 foreach ($note as $notifier) {
 	echo 'hello';
-	print($notifier['body']);
+	print($notifier['items']['body']);
 }
 
 }
