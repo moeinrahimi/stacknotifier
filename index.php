@@ -47,9 +47,10 @@ $client = new Client([
 echo $access_token;
 $response = $client->request('GET',"2.2/me/notifications?site=stackoverflow&access_token=$access_token&key=TxfA4E5YFX*jZ5wHEd2iKg((");
 $y = (string) $response->getBody();
-$note = json_decode($y,true);
-
-	print($note['items']['0']['body']);
+$notes = json_decode($y,true);
+	foreach ($notes as $note) {
+	print($note['items']['body']);
+	}
 
 
 }
