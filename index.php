@@ -36,7 +36,7 @@ $response = $client->request('POST', 'access_token', [
 
 $auth = json_decode($response->getBody()->getContents(),true);
 
-print_r($auth['0']);
+var_dump($auth);
 }
 
 ?>
