@@ -45,7 +45,7 @@ $client = new Client([
     'timeout'  => 2.0,
 ]);
 
-$response = $client->post('2.2/me/notifications?site=stackoverflow&access_token=$access_token');
+$response = $client->request('GET','2.2/me/notifications?site=stackoverflow&access_token=$access_token');
 print_r($response->getBody->getContents());
 
 }
