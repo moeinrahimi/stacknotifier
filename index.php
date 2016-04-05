@@ -37,7 +37,17 @@ $response = $client->request('POST', 'access_token', [
 $auth =$response->getBody()->getContents();
 
 $auth = parse_str($auth);
-echo $access_token;
+
+$client = new Client([
+    // Base URI is used with relative requests
+    'base_uri' => 'https://api.stackexchange.com/',
+    // You can set any number of default request options.
+    'timeout'  => 2.0,
+]);
+
+$response = $client->post('2.2/me/notifications?site=stackoverflow&access_token=$access_token');
+print_r($response->getBody->getContents());
+
 }
 
 ?>
